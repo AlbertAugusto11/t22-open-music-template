@@ -4,28 +4,120 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open Music</title>
+    <script src="./src/scripts/index.js" defer></script>
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/globalStyles.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
+    <link rel="stylesheet" href="./src/styles/header.css">
+    <link rel="stylesheet" href="./src/styles/price-range.css">
+    <link rel="stylesheet" href="./src/styles/albums.css">
+    <link rel="stylesheet" href="./src/styles/genres.css">
   </head>
   <body>
     <!-- CABEÇALHO -->
     <header>
-      <!-- DESENVOLVA AQUI OS ELEMENTOS DO CABEÇALHO -->
+      <h1><span>o</span>pen <span>m</span>usic</h1>
+      <button></button>
     </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
-      <!-- SEÇÃO DE FILTRO POR GENERO -->
       <section>
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
+        <h2>Gênero Musical</h2>
+        <div>
+          <p>Todos</p>
+          <p>Pop</p>
+          <p>MPB</p>
+          <p>Forró</p>
+          <p>Bailão</p>
+          <p>Rap</p>
+          <p>Hip-Hop</p>
+        </div>
       </section>
 
-      <!-- SEÇÃO DE FILTRO POR PREÇO -->
       <section>
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
+        <div>
+          <h2>Definir Preço</h2>
+          <h2>Até <span>R$ 100</span></h2>
+        </div>
+        <div>
+          <input type="range" min="0" max="100">
+        </div>
       </section>
 
-      <!-- SEÇÃO DE ALBUNS -->
       <section>
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
+        <h3>Albuns Encontrados</h3>
+        <div>
+          <div>
+            <div><img src="./src/assets/imgs/cover-1.png" alt="cover-1"></div>
+            <h4>Acabou o Chorare</h4>
+            <div>
+              <p>Novos Bailados</p>
+              <p>MPB</p>
+            </div>
+            <div>
+              <p>R$ 137,91</p>
+              <button>Comprar</button>
+            </div>
+          </div>
+          <div>
+            <div><img src="./src/assets/imgs/cover-2.png" alt="cover-2"></div>
+            <h4>The Wall</h4>
+            <div>
+              <p>Pink Floyd</p>
+              <p>Rock</p>
+            </div>
+            <div>
+              <p>R$ 123,56</p>
+              <button>Comprar</button>
+            </div>
+          </div>
+          <div>
+            <div><img src="./src/assets/imgs/cover-3.png" alt="cover-1"></div>
+            <h4>To Pimp a Butterfly</h4>
+            <div>
+              <p>Kendrick Lamar</p>
+              <p>Rap</p>
+            </div>
+            <div>
+              <p>R$ 102,66</p>
+              <button>Comprar</button>
+            </div>
+          </div>
+          <div>
+            <div><img src="./src/assets/imgs/cover-2.png" alt="cover-2"></div>
+            <h4>The Wall</h4>
+            <div>
+              <p>Pink Floyd</p>
+              <p>Rock</p>
+            </div>
+            <div>
+              <p>R$ 123,56</p>
+              <button>Comprar</button>
+            </div>
+            <div>
+              <div><img src="./src/assets/imgs/cover-1.png" alt="cover-1"></div>
+              <h4>Acabou o Chorare</h4>
+              <div>
+                <p>Novos Bailados</p>
+                <p>MPB</p>
+              </div>
+              <div>
+                <p>R$ 137,91</p>
+                <button>Comprar</button>
+              </div>
+              <div>
+                <div><img src="./src/assets/imgs/cover-3.png" alt="cover-1"></div>
+                <h4>To Pimp a Butterfly</h4>
+                <div>
+                  <p>Kendrick Lamar</p>
+                  <p>Rap</p>
+                </div>
+                <div>
+                  <p>R$ 102,66</p>
+                  <button>Comprar</button>
+                </div>
+        </div>
       </section>
     </main>
   </body>
