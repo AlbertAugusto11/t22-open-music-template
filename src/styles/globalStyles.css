@@ -18,7 +18,7 @@
 body{
     font-family: "Inter", sans-serif;
     width: 64rem;
-    background-color: var(--grey-8);
+    background-color: var(--grey-9);
     display: flex;
     position: absolute;
     flex-direction: column;
