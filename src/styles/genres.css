@@ -1,0 +1,32 @@
+.main__section1{
+    width: 63.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.section1__h2{
+    font-size: var(--font-1);
+    margin-top: 1.5rem;
+    color: var(--gray-2);
+}
+.section1__div{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+}
+.section1__div button{
+    width: 6.25rem;
+    height: 1.380rem;
+    font-size: var(--font-2);
+    color: var(--gray-2);
+    background-color: var(--gray-7);
+    border-radius: 4px;
+    border: none;
+}
+.section1__div button:hover{
+    cursor: pointer;
+}
+.section1__div button:focus{
+    background-color: var(--gray-1);
+    color: var(--gray-8);
+}

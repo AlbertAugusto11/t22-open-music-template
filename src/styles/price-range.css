@@ -1,0 +1,43 @@
+.main__section2{
+    width: 63.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.section2__div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.section2__div h2{
+    font-size: var(--font-1);
+    color: var(--gray-1);
+}
+.section2__div h2 span{
+    font-size: var(--font-1);
+    color: var(--brand-1);
+}
+
+
+
+
+.section2__input {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 63.75rem;
+    outline: none;
+    background-color: var(--brand-2);
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+  .section2__input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 0.5rem solid var(--brand-2);
+  }

@@ -14,109 +14,107 @@
     <link rel="stylesheet" href="./src/styles/genres.css">
   </head>
   <body>
-    <!-- CABEÇALHO -->
-    <header>
-      <h1><span>o</span>pen <span>m</span>usic</h1>
-      <button></button>
+    <header class="body__header">
+      <h1 class="header__h1"><span>o</span>pen <span>m</span>usic</h1>
+      <button class="header__button"></button>
     </header>
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main>
-      <section>
-        <h2>Gênero Musical</h2>
-        <div>
-          <p>Todos</p>
-          <p>Pop</p>
-          <p>MPB</p>
-          <p>Forró</p>
-          <p>Bailão</p>
-          <p>Rap</p>
-          <p>Hip-Hop</p>
+    <main class="body__main">
+      <section class="main__section1">
+        <h2 class="section1__h2">Gênero Musical</h2>
+        <div class="section1__div">
+          <button id="todos">Todos</button>
+          <button>Pop</button>
+          <button>MPB</button>
+          <button>Forró</button>
+          <button>Bailão</button>
+          <button>Rap</button>
+          <button>Hip-Hop</button>
         </div>
       </section>
 
-      <section>
-        <div>
+      <section class="main__section2">
+        <div class="section2__div">
           <h2>Definir Preço</h2>
           <h2>Até <span>R$ 100</span></h2>
         </div>
-        <div>
-          <input type="range" min="0" max="100">
-        </div>
+        <input class="section2__input" type="range" min="0" max="100">
       </section>
 
-      <section>
-        <h3>Albuns Encontrados</h3>
-        <div>
-          <div>
-            <div><img src="./src/assets/imgs/cover-1.png" alt="cover-1"></div>
-            <h4>Acabou o Chorare</h4>
-            <div>
+      <section class="main__section3">
+        <h3 class="section3__h3">Albuns Encontrados</h3>
+        <div class="section3__divMain">
+          <div class="divMain__divCard">
+            <div class="divCard__divImg"><img src="./src/assets/imgs/cover-1.png" alt="cover-1"></div>
+            <h4 class="divCard__h4">Acabou o Chorare</h4>
+            <div class="divCard__divInf">
               <p>Novos Bailados</p>
               <p>MPB</p>
             </div>
-            <div>
+            <div class="divCard__divPrice">
               <p>R$ 137,91</p>
               <button>Comprar</button>
             </div>
           </div>
-          <div>
-            <div><img src="./src/assets/imgs/cover-2.png" alt="cover-2"></div>
-            <h4>The Wall</h4>
-            <div>
+          <div class="divMain__divCard">
+            <div class="divCard__divImg"><img src="./src/assets/imgs/cover-2.png" alt="cover-2"></div>
+            <h4 class="divCard__h4">The Wall</h4>
+            <div class="divCard__divInf">
               <p>Pink Floyd</p>
               <p>Rock</p>
             </div>
-            <div>
+            <div class="divCard__divPrice">
               <p>R$ 123,56</p>
               <button>Comprar</button>
             </div>
           </div>
-          <div>
-            <div><img src="./src/assets/imgs/cover-3.png" alt="cover-1"></div>
-            <h4>To Pimp a Butterfly</h4>
-            <div>
+          <div class="divMain__divCard">
+            <div class="divCard__divImg"><img src="./src/assets/imgs/cover-3.png" alt="cover-1"></div>
+            <h4 class="divCard__h4">To Pimp a Butterfly</h4>
+            <div class="divCard__divInf">
               <p>Kendrick Lamar</p>
               <p>Rap</p>
             </div>
-            <div>
+            <div class="divCard__divPrice">
               <p>R$ 102,66</p>
               <button>Comprar</button>
             </div>
           </div>
-          <div>
-            <div><img src="./src/assets/imgs/cover-2.png" alt="cover-2"></div>
-            <h4>The Wall</h4>
-            <div>
+          <div class="divMain__divCard">
+            <div class="divCard__divImg"><img src="./src/assets/imgs/cover-2.png" alt="cover-2"></div>
+            <h4 class="divCard__h4">The Wall</h4>
+            <div class="divCard__divInf">
               <p>Pink Floyd</p>
               <p>Rock</p>
             </div>
-            <div>
+            <div class="divCard__divPrice">
               <p>R$ 123,56</p>
               <button>Comprar</button>
             </div>
-            <div>
-              <div><img src="./src/assets/imgs/cover-1.png" alt="cover-1"></div>
-              <h4>Acabou o Chorare</h4>
-              <div>
-                <p>Novos Bailados</p>
-                <p>MPB</p>
-              </div>
-              <div>
-                <p>R$ 137,91</p>
-                <button>Comprar</button>
-              </div>
-              <div>
-                <div><img src="./src/assets/imgs/cover-3.png" alt="cover-1"></div>
-                <h4>To Pimp a Butterfly</h4>
-                <div>
-                  <p>Kendrick Lamar</p>
-                  <p>Rap</p>
-                </div>
-                <div>
-                  <p>R$ 102,66</p>
-                  <button>Comprar</button>
-                </div>
+          </div>
+          <div class="divMain__divCard">
+            <div class="divCard__divImg"><img src="./src/assets/imgs/cover-1.png" alt="cover-1"></div>
+            <h4 class="divCard__h4">Acabou o Chorare</h4>
+            <div class="divCard__divInf">
+              <p>Novos Bailados</p>
+              <p>MPB</p>
+            </div>
+            <div class="divCard__divPrice">
+              <p>R$ 137,91</p>
+              <button>Comprar</button>
+            </div>
+          </div>
+          <div class="divMain__divCard">
+            <div class="divCard__divImg"><img src="./src/assets/imgs/cover-3.png" alt="cover-1"></div>
+            <h4 class="divCard__h4">To Pimp a Butterfly</h4>
+            <div class="divCard__divInf">
+              <p>Kendrick Lamar</p>
+              <p>Rap</p>
+            </div>
+            <div class="divCard__divPrice">
+              <p>R$ 102,66</p>
+              <button>Comprar</button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
