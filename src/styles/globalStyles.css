@@ -18,10 +18,13 @@
 body{
     font-family: "Inter", sans-serif;
     width: 64rem;
-    background-color: var(--grey-9);
+    background-color: var(--gray-9);
     display: flex;
     position: absolute;
     flex-direction: column;
+}
+.body--modifier{
+    background-color: var(--gray-0);
 }
 .body__main{
     display: flex;

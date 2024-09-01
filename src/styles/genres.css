@@ -9,12 +9,15 @@
     margin-top: 1.5rem;
     color: var(--gray-2);
 }
+.section1__h2--modifier{
+    color: #ffffff;
+}
 .section1__div{
     display: flex;
     flex-flow: row wrap;
     gap: 1rem;
 }
-.section1__div button{
+.section1__div__button{
     width: 6.25rem;
     height: 1.380rem;
     font-size: var(--font-2);
@@ -23,10 +26,20 @@
     border-radius: 4px;
     border: none;
 }
-.section1__div button:hover{
+.section1__div__button:hover{
     cursor: pointer;
 }
-.section1__div button:focus{
+.section1__div__button:focus{
     background-color: var(--gray-1);
     color: var(--gray-8);
 }
+.section1__div__button--modifier{
+    color: var(--gray-7);
+    background-color: var(--gray-1);
+}
+.section1__div__button--modifier:focus{
+    background-color: var(--gray-8);
+    color: var(--gray-1);
+}
+
+
