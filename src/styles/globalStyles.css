@@ -27,6 +27,7 @@ body{
     background-color: var(--gray-0);
 }
 .body__main{
+    width: 63.75rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;

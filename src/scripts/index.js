@@ -1,5 +1,5 @@
 //TIRAR DEPOIS
-const albumList = [
+let albumList = [
     {
       title: "Acabou o Chorare",
       genre: "MPB",
@@ -43,6 +43,15 @@ const albumList = [
       img: "./src/assets/imgs/domSambar.jpg",
     },
 ];
+
+let x;
+fetch('https://openmusic-fake-api.onrender.com/api/musics')
+.then(response => response.json())
+.then(data => {
+  renderAllAlbums(data);
+  x = data;
+})
+.catch(error => console.error('Erro:', error));
 
 //TIRAR DEPOIS
 function applyInputRangeStyle() {
@@ -162,10 +171,16 @@ function filtraAlbum (){
   const priceRange = document.querySelector("#priceRange");
   inputRange.addEventListener("input",() =>{
     priceRange.innerText = `R$ ${inputRange.value}`;
-    let list = albumList.filter(element =>{
+    let list = x.filter(element =>{
     return element.price <= inputRange.valueAsNumber;
     });
     renderAllAlbums(list);
+    
   });
 }
 filtraAlbum();
+
+
+
+
+
