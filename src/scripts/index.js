@@ -44,14 +44,17 @@ let albumList = [
     },
 ];
 
-let x;
-fetch('https://openmusic-fake-api.onrender.com/api/musics')
-.then(response => response.json())
-.then(data => {
-  renderAllAlbums(data);
-  x = data;
-})
-.catch(error => console.error('Erro:', error));
+let modeDark = false;
+let apiData;
+function api(){
+  fetch('https://openmusic-fake-api.onrender.com/api/musics')
+  .then(response => response.json())
+  .then(data => {
+    renderAllAlbums(data);
+    apiData = data;
+  })
+  .catch(error => console.error('Erro:', error));
+}
 
 //TIRAR DEPOIS
 function applyInputRangeStyle() {
@@ -62,10 +65,13 @@ function applyInputRangeStyle() {
     inputRange.style.background = `linear-gradient(to right, var(--brand-2) ${runnableTrackProgress}%, var(--gray-5) ${runnableTrackProgress}%)`;
   });
 }
-applyInputRangeStyle()
 
-let modeDark = false;
 function rotine(){
+  api();
+  applyInputRangeStyle();
+  darkMode();
+  recuperaModo();
+  filtraAlbum();
 }
 rotine();
 
@@ -93,6 +99,8 @@ function renderAllAlbums(list){
     const divMainDivCard = document.querySelectorAll(".divMain__divCard");
     const divCardH4 = document.querySelectorAll(".divCard__h4");
     const divInfP = document.querySelectorAll(".divInf__p");
+    const divPriceP = document.querySelectorAll(".divPrice__p");
+
     divMainDivCard.forEach(element =>{
       element.classList.toggle("divMain__divCard--modifier");
     });
@@ -102,11 +110,11 @@ function renderAllAlbums(list){
     divInfP.forEach(element =>{
       element.classList.toggle("divInf__p--modifier");
     });
+    divPriceP.forEach(element =>{
+      element.classList.toggle("divPrice__p--modifier");
+    });
   }
-};
-renderAllAlbums(albumList);
-
-//theme
+}
 
 function darkMode(){
   const buttonHeader = document.querySelector(".header__button");
@@ -152,7 +160,6 @@ function darkMode(){
 
   });
 }
-darkMode();
 
 function recuperaModo () {
   const buttonHeader = document.querySelector(".header__button");
@@ -163,22 +170,19 @@ function recuperaModo () {
     buttonHeader.click();
   }
 }
-recuperaModo();
-//theme
 
 function filtraAlbum (){
   const inputRange = document.querySelector(".section2__input");
   const priceRange = document.querySelector("#priceRange");
   inputRange.addEventListener("input",() =>{
     priceRange.innerText = `R$ ${inputRange.value}`;
-    let list = x.filter(element =>{
+    let list = apiData.filter(element =>{
     return element.price <= inputRange.valueAsNumber;
     });
     renderAllAlbums(list);
-    
   });
 }
-filtraAlbum();
+
 
 
 
