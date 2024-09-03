@@ -43,7 +43,6 @@ let albumList = [
       img: "./src/assets/imgs/domSambar.jpg",
     },
 ];
-
 let modeDark = false;
 let apiData;
 function api(){
@@ -55,8 +54,6 @@ function api(){
   })
   .catch(error => console.error('Erro:', error));
 }
-
-//TIRAR DEPOIS
 function applyInputRangeStyle() {
   const inputRange = document.querySelector(".section2__input");
   inputRange.addEventListener("input", (event) => {
@@ -65,15 +62,6 @@ function applyInputRangeStyle() {
     inputRange.style.background = `linear-gradient(to right, var(--brand-2) ${runnableTrackProgress}%, var(--gray-5) ${runnableTrackProgress}%)`;
   });
 }
-
-function rotine(){
-  api();
-  applyInputRangeStyle();
-  darkMode();
-  recuperaModo();
-  filtraAlbum();
-}
-rotine();
 
 function renderAllAlbums(list){
   const divMain = document.querySelector('.section3__divMain');
@@ -183,7 +171,61 @@ function filtraAlbum (){
   });
 }
 
+function filtraGenero(){
+  const divButtons = document.querySelectorAll(".section1__div__button");
+  const inputRange = document.querySelector(".section2__input");
+  divButtons[0].addEventListener("click", () =>{
+    location.reload();
+  });
+  divButtons[1].addEventListener("click", () =>{
+    let list = apiData.filter(element =>{
+      if(element.price <= inputRange.value){
+        return element.genre == divButtons[1].innerText;
+      }
+    });
+    renderAllAlbums(list);
+  });
+  divButtons[2].addEventListener("click", () =>{
+    let list = apiData.filter(element =>{
+      return element.genre == divButtons[2].innerText;
+    })
+    renderAllAlbums(list)
+  });
+  divButtons[3].addEventListener("click", () =>{
+    let list = apiData.filter(element =>{
+      return element.genre == divButtons[3].innerText;
+    })
+    renderAllAlbums(list)
+  });
+  divButtons[4].addEventListener("click", () =>{
+    let list = apiData.filter(element =>{
+      return element.genre == divButtons[4].innerText;
+    })
+    renderAllAlbums(list)
+  });
+  divButtons[5].addEventListener("click", () =>{
+    let list = apiData.filter(element =>{
+      return element.genre == divButtons[5].innerText;
+    })
+    renderAllAlbums(list)
+  });
+  divButtons[6].addEventListener("click", () =>{
+    let list = apiData.filter(element =>{
+      return element.genre == divButtons[6].innerText;
+    })
+    renderAllAlbums(list)
+  });
+}
 
+function rotine(){
+  api();
+  applyInputRangeStyle();
+  darkMode();
+  recuperaModo();
+  filtraAlbum();
+  filtraGenero();
+}
+rotine();
 
 
 
